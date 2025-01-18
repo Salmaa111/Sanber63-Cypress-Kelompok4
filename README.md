@@ -20,7 +20,7 @@ Nama - GitHub
 7. Proceed to Checkout
 
 8. Variasikan skenario pengujian (positive & negative test) dan terapkan penggunaan:
-Cypress Configuration
-Custom Command
-Fixtures
-Page Object Model
+   Cypress Configuration
+   Custom Command
+   Fixtures
+   Page Object Model
