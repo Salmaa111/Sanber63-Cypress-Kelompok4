@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Salmaa111/Sanber63-Cypress-Kelompok4#readme",
   "devDependencies": {
+    "@cypress/webpack-batteries-included-preprocessor": "^2.4.1",
     "cypress": "^14.0.0"
   }
 }

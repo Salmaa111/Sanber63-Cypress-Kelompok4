@@ -1,0 +1,43 @@
+{
+    "env" : {
+        "links" : {
+            "baseURl" : "https://magento.softwaretestingboard.com/",
+            "profURl" : "https://magento.softwaretestingboard.com/customer/account/"
+        },
+        "users" : {
+            "user1" : {
+                "email" : "testing@example.com",
+                "pass" : "Abc12345."
+            },
+            "user2" : {
+                "email" : "testing1@example.com",
+                "pass" : "aBc12345."
+            },
+            "user3" : {
+                "email" : "testing1@example.com",
+                "pass" : "Abc12345."
+            },
+            "user4" : {
+                "email" : "testing@example.com",
+                "pass" : "aBc12345."
+            }
+        },
+        "mails" : {
+            "mailonly1" : {
+                "email" : "testing@example.com"
+            },
+            "mailonly2" : {
+                "email" : "testing1@example.com"
+            }
+        },
+        "passwrd" : {
+            "passonly1" : {
+                "pass" : "Abc12345."
+            },
+            "passonly2" : {
+                "pass" : "aBc12345."
+            }    
+        }
+    }
+    
+}
