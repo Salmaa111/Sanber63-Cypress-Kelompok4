@@ -10,17 +10,15 @@ describe('Change Email And Password LUMA', () => {
     });
 
     it('Change Email - Positive', () => {
-        cy.fixture('Data.json').then((data) => {
-            // Get new email and password from Data.json
-
             cy.contains('Edit').click()
+            accountInformationPage.clearInputFirstname()
             accountInformationPage.inputFirstname('Testing')
+            accountInformationPage.clearInputLasttname()
             accountInformationPage.inputLastname('Testingin')
-            cy.get('#change-email').click()
+            accountInformationPage.changeEmailCheckBox()
             cy.newEmail('mailonly1')
             cy.currentPassword('passonly1')
             accountInformationPage.saveButtonClick()
             accountInformationPage.verifySuccess('You saved the account information')
-        });
     });
 });

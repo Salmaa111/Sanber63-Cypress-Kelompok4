@@ -1,6 +1,7 @@
 class accountInformationPage {
     email = '#email'
     pass = '#pass'
+    changeEmail = '#change-email'
     firstName = '#firstname'
     lastName = '#lastname'
     loginBtn = '#send2'
@@ -10,6 +11,7 @@ class accountInformationPage {
     saveBtn = '#form-validate > .actions-toolbar > div.primary > .action'
     signIn = '.panel > .header > .authorization-link > a'
     currentPassword = '#current-password'
+    editBtn = '.block-dashboard-info > .block-content > .box > .box-actions > .edit > span'
 
     clickLogin(){
         cy.get(this.loginBtn).click()
@@ -20,11 +22,19 @@ class accountInformationPage {
     }
 
     inputFirstname(firstname) {
-        cy.get(this.firstName).clear().type(firstname)
+        cy.get(this.firstName).type(firstname)
+    }
+
+    clearInputFirstname () {
+        cy.get(this.firstName).clear()
+    }
+
+    clearInputLasttname () {
+        cy.get(this.lastName).clear()
     }
 
     inputLastname(lastname) {
-        cy.get(this.lastName).clear().type(lastname)
+        cy.get(this.lastName).type(lastname)
     }
 
     inputEmail(email) {
@@ -37,6 +47,10 @@ class accountInformationPage {
 
     inputNewEmail(email) {
         cy.get(this.email).clear().type(email)
+    }
+
+    changeEmailCheckBox() {
+        cy.get(this.changeEmail).click()
     }
 
     inputCurrentPassword(pass) {
@@ -58,6 +72,10 @@ class accountInformationPage {
     saveButtonClick() {
         cy.get(this.saveBtn).click()
     } 
+
+    editButtonClick () {
+        cy.get(this.editBtn).click()
+    }
 
 
 }

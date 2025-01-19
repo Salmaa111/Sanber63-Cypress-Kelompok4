@@ -39,8 +39,9 @@ Cypress.Commands.add('newEmail', (newemail) => {
         const mail = mails[newemail]
 
         const {email} = mail
-
+        
         accountInformationPage.inputNewEmail(email)
+        //cy.get('#email').clear().type(email)
     })
 })
 
@@ -51,7 +52,7 @@ Cypress.Commands.add('currentPassword', (newpass) => {
 
         const {pass} = passw
 
-        accountInformationPage.inputCurrentPassword(pass)
+        cy.get('#current-password').type(pass)
     })
 })
 
