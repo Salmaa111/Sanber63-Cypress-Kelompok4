@@ -8,5 +8,9 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
-  chromeWebSecurity: false
+  chromeWebSecurity: false,
+  viewportHeight: 660,
+  viewportWidth: 1000,
+  defaultCommandTimeout: 5000,
+  defaultBrowser: 'chrome',
 });
