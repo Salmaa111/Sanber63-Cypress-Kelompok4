@@ -5,8 +5,9 @@ module.exports = defineConfig({
     "baseUrl": "https://magento.softwaretestingboard.com",
 
     setupNodeEvents(on, config) {
-      // implement node event listeners here
     },
+    baseUrl : 'https://magento.softwaretestingboard.com/',
+    profileUrl : 'https://magento.softwaretestingboard.com/customer/account/',
   },
   chromeWebSecurity: false,
   viewportHeight: 660,
