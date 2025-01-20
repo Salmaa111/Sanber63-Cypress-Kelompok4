@@ -13,49 +13,67 @@ Cypress.Commands.add('SignIn', (email, password) => {
     })
 })
 
-Cypress.Commands.add('auth', (reqEnv, reqUsr) => {
+Cypress.Commands.add('visitFromData', (linkKey) => {
     cy.fixture('Data.json').then((data) => {
-        // Get the correct link based on the environment
-        const links = data.env.links
-        const link = links[reqEnv]
+      const link = data.env.links[linkKey];
+        if (!link) {
+            throw new Error(`Link "${linkKey}" not found in Data.json`);
+        }
+      cy.visit(link);
+    });
+});
 
-        cy.visit(link)
+Cypress.Commands.add('inputCredentialsFromJson', (userKey) => {
+        cy.fixture('Data.json').then((data) => {
+        const users = data.env.users;
+    
+        if (!users.hasOwnProperty(userKey)) {
+            throw new Error(`User "${userKey}" not found in Data.json users`);
+        }
+    
+        const user = users[userKey];
+        if (!user.hasOwnProperty('email') || !user.hasOwnProperty('pass')) {
+            throw new Error(`User "${userKey}" does not have property "email" or "pass" in Data.json users`);
+        }
+        const { email, pass } = user;
+        cy.visit(Cypress.config('baseUrl'))
         accountInformationPage.clickSignIn()
-
-        const users = data.env.users
-        const user = users[reqUsr]
-
-        const { email, pass } = user
-
-        accountInformationPage.inputEmail(email)
-        accountInformationPage.inputPassword(pass)
+        cy.inputEmail(email);
+        cy.inputPassword(pass);
         accountInformationPage.clickLogin()
     });
 });
 
-Cypress.Commands.add('newEmail', (newemail) => {
-    cy.fixture('Data.json').then((data) => {
-        const mails = data.env.mails
-        const mail = mails[newemail]
+//   Cypress.Commands.add('inputEmail', (email) => {
+//     cy.get('#email').type(email);
+// });
 
-        const {email} = mail
-        
-        accountInformationPage.inputNewEmail(email)
-        //cy.get('#email').clear().type(email)
+// Cypress.Commands.add('inputPassword', (password) => {
+//     cy.get('#pass').type(password, { log: false });
+// });
+
+
+Cypress.Commands.add('newEmail', (emailKey) => {
+    cy.fixture('Data.json').then((data) => {
+
+      const emails = data.env.mails
+      const emailData = emails[emailKey]
+      const email = emailData.email
+
+      return email
+  
+    });
+});
+
+Cypress.Commands.add('currentPassword', (passwordKey) => {
+    cy.fixture('Data.json').then((data) => {
+      const passwords = data.env.passwrd
+      const passwordData = passwords[passwordKey]
+      const password = passwordData.pass
+
+      return password;
     })
 })
-
-Cypress.Commands.add('currentPassword', (newpass) => {
-    cy.fixture('Data.json').then((data) => {
-        const passwrd = data.env.passwrd
-        const passw = passwrd[newpass]
-
-        const {pass} = passw
-
-        cy.get('#current-password').type(pass)
-    })
-})
-
 
 Cypress.Commands.add('VerifySuccess', (message) => {
     accountInformationPage.verifySuccess(message)

@@ -6,28 +6,37 @@
         },
         "users" : {
             "user1" : {
-                "email" : "testing@example.com",
+                "email" : "alpha@testing.com",
                 "pass" : "Abc12345."
             },
             "user2" : {
-                "email" : "testing1@example.com",
+                "email" : "alpha@testing.com",
                 "pass" : "aBc12345."
             },
             "user3" : {
-                "email" : "testing1@example.com",
+                "email" : "alpha1@testing.com",
                 "pass" : "Abc12345."
             },
             "user4" : {
-                "email" : "testing@example.com",
+                "email" : "alpha1@testing.com",
                 "pass" : "aBc12345."
             }
         },
         "mails" : {
             "mailonly1" : {
-                "email" : "testing@example.com"
+                "email" : "alpha@testing.com"
             },
             "mailonly2" : {
-                "email" : "testing1@example.com"
+                "email" : "alpha1@testing.com"
+            },
+            "blankmail1" : {
+                "email" : ""
+            },
+            "failmail" : {
+                "email" : "testing"
+            },
+            "failmail_num" : {
+                "email" : "1234"
             }
         },
         "passwrd" : {
@@ -36,7 +45,20 @@
             },
             "passonly2" : {
                 "pass" : "aBc12345."
+            },
+            "passnoup" : {
+                "pass" : "abc12345."
+            },
+            "passnumonly" : {
+                "pass" : "123456"
+            },
+            "passup" : {
+                "pass" : "ABC12345."
+            },
+            "passnosymbol" : {
+                "pass" : "Abc12345"
             }    
+
         }
     }
     

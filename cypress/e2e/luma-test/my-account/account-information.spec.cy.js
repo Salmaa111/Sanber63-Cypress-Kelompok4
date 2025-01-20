@@ -1,14 +1,13 @@
 import accountInformationPage from "../../../support/pageObjectAccount/account-informationPage";
 
 describe('Change Name Test LUMA', () => {
-    before(() => {
-        cy.clearCookies();
-    })
     beforeEach(() => {
-        cy.SignIn('testing@example.com', 'Abc12345.')
-        cy.visit(Cypress.config('profileUrl'));
+        cy.SignIn('alpha@testing.com', 'Abc12345.')
+        cy.visitFromData('profURl')
         accountInformationPage.editButtonClick()
-        
+    })
+    after(() => {
+        cy.clearCookies();
     })
     
     it('Edit Name - Save Without Edit - Positive' , () => {
