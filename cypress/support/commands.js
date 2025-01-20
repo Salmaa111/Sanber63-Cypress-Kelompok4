@@ -180,14 +180,6 @@ Cypress.Commands.add('inputCredentialsFromJson', (userKey) => {
     });
 });
 
-//   Cypress.Commands.add('inputEmail', (email) => {
-//     cy.get('#email').type(email);
-// });
-
-// Cypress.Commands.add('inputPassword', (password) => {
-//     cy.get('#pass').type(password, { log: false });
-// });
-
 
 Cypress.Commands.add('newEmail', (emailKey) => {
     cy.fixture('Data.json').then((data) => {
