@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('fillAddressForm', (addressData) => {
+    cy.get('#firstname').clear().type(addressData.firstName);
+    cy.get('#lastname').clear().type(addressData.lastName); 
+    cy.get('#telephone').clear().type(addressData.phone); 
+    cy.get('#street_1').clear().type(addressData.street); 
+    cy.get('#city').clear().type(addressData.city); 
+    cy.get('#zip').clear().type(addressData.zip); 
+    cy.get('#country').select(addressData.country); 
+  });
+  
+  Cypress.Commands.add('saveAddress', () => {
+    cy.get('button[title="Save Address"]').click(); 
+  });
+  
