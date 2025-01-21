@@ -1,0 +1,22 @@
+{
+    "validAddress": {
+      "firstName": "inara",
+      "lastName": "suci",
+      "phone": "08127545323",
+      "street": "jl kenangan",
+      "city": "Jakarta Pusat",
+      "zip": "726375",
+      "country": "Indonesia"
+    },
+    "invalidAddress": {
+      "firstName": "",
+      "lastName": "",
+      "phone": "",
+      "street": "",
+      "city": "",
+      "zip": "",
+      "country": ""
+    }
+  }
+
+  
