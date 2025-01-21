@@ -6,9 +6,8 @@ describe('Navigation Bar Test', () => {
         cy.visit('http://magento.softwaretestingboard.com');
         cy.get('#ui-id-5 > :nth-child(2)').click();
 
-        cy.get('[class*="product-image-wrapper"]').click({multiple: true});
-        cy.get('#product-addtocart-button').click()
-        cy.get('').should()
+        cy.get('[class*="product-image-wrapper"]').trigger('mouseover');
+        cy.get('[class*="action towishlist"]').click();
         
     });
 });

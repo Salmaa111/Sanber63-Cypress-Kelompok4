@@ -6,9 +6,8 @@ describe('Navigation Bar Test', () => {
         cy.visit('http://magento.softwaretestingboard.com/women.html');
 
         cy.get('#ui-id-5 > :nth-child(2)').trigger('mouseover');
-        cy.get('#ui-id-17').trigger('mouseover');
-        cy.get('#ui-id-19').click()
-        cy.get('.base').should('contain', 'Jackets')
+        cy.get('#ui-id-17').click()
+        cy.get('.base').should('contain', 'Tops')
 
     
     });

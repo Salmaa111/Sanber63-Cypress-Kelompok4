@@ -8,7 +8,6 @@ describe('Navigation Bar Test', () => {
 
         cy.get('[class*="product-image-wrapper"]').click({multiple: true});
         cy.get('#product-addtocart-button').click()
-        cy.get('').should()
         
     });
 });
