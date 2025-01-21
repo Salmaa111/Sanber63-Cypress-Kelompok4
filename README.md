@@ -1,23 +1,37 @@
 # Sanber63-Cypress-Kelompok4
 
 # Nama Anggota Kelompok 4
-1. Anggi - Create an account
-2. Aula HM - Login
-3. Bahtia Reka - My Account > Edit Account Information & Edit Address (Account Information)
-4. Kevin Juantin - - Choose products and update shopping cart (?)
-5. Salma - My Account > Edit Account Information & Edit Address (Add New Address)
-6. Shaden - Choose products and update shopping cart (?)
-7. Reza Paramarta - Proceed to Checkout
+Nama - GitHub
+1. Anggi - farrahanggia
+2. Aula HM -aulahani
+3. Bahtiar Eka -bahtiareka96
+4. Salma Ayun - Salmaa111
+5. Kevin Juantin - KevinJuantin
+6. Shaden - shadenalfadels07
+7. Reza Paramarta - rezaparamarta
 
-# List task
-1. Create an account
+# List Task (sesuai nomor urut)
+1. Create an Account
+Nama - GitHub
+1. Anggi - farrahanggia
+2. Aula HM -aulahani
+3. Bahtiar Eka -bahtiareka96
+4. Salma Ayun - Salmaa111
+5. Kevin Juantin - KevinJuantin
+6. Shaden - shadenalfadels07
+7. Reza Paramarta - rezaparamarta
+
+# List Task (sesuai nomor urut)
+1. Create an Account
 2. Login
-3. My Account > Edit Account Information & Edit Address
-4. Choose products and Update Shopping cart
-5. Proceed to Checkout
-6. Variasikan skenario pengujian (positive & negative test) dan terapkan penggunaan
+3. My Account > Edit Account Information & Edit Address (Account Information)
+4. My Account > Edit Account Information & Edit Address (Add New Address)
+5. Choose products and Update Shopping cart (v1)
+6. Choose products and Update Shopping cart (v2)
+7. Proceed to Checkout
 
-Cypress Configuration
-Custom command
-Fixtures
-Page Object Model
+8. Variasikan skenario pengujian (positive & negative test) dan terapkan penggunaan:
+   Cypress Configuration
+   Custom Command
+   Fixtures
+   Page Object Model
